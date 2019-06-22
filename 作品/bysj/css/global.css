@@ -1,0 +1,181 @@
+body {
+    height: 100%;
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right;
+}
+
+body {
+    background-color: rgb(249, 249, 249);
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #4d5b76), color-stop(1, #6c7a95));
+}
+
+header h1 {
+    padding-left: 20px;
+    line-height: 40px;
+    font-size: 20px;
+    color: white;
+}
+
+#logo {
+    margin-left: 10px;
+    height: 30px;
+    line-height: 40px;
+}
+
+#logo img {
+    height: 25px;
+    width: auto;
+}
+
+.load {
+    float: right;
+    margin-right: 13px;
+}
+
+#logout {
+    float: right;
+    margin: 0 20px;
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+}
+
+#logout a {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: white;
+}
+
+#logout a:hover {
+    color: red;
+}
+
+#logout a i {
+    line-height: 40px;
+}
+
+.content {
+    overflow: hidden;
+    padding-top: 40px;
+}
+
+.content > aside {
+    float: left;
+    width: 17%;
+    border-right: 1px solid gray;
+    background-color: rgb(238, 238, 238);
+    margin-bottom: -3000px;
+    padding-bottom: 3000px;
+}
+
+aside ul li {
+    height: auto;
+    line-height: 35px;
+    min-height: 35px;
+    border-bottom: 1px solid #c8c8c8;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #efeff0), color-stop(1, #ffffff));
+}
+
+aside a {
+    color: #333;
+    text-decoration: none;
+    padding-left: 20px;
+    display: block;
+}
+
+.aside_hide_click {
+    padding-left: 20px;
+}
+
+.aside_hide_click a {
+    padding: 0;
+}
+
+.hover-color {
+    background-color: #e0e0e8
+}
+
+.color {
+    background-color: #e0e0e8
+}
+
+aside ul li:hover {
+    background-color: #e0e0e8;
+}
+
+aside ul li a:hover {
+    background-color: #e0e0e8;
+}
+
+html,
+body,
+.wrap,
+.content,
+.main {
+    height: 100%;
+}
+
+.main {
+    position: relative;
+    margin-left: 17%;
+}
+
+.content-title {
+    margin: 0;
+    height: 63px;
+    font-size: 21px;
+    padding-left: 20px;
+    line-height: 63px;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e6e6e6), color-stop(1, #ffffff));
+}
+
+.content-title1 {
+    height: 38px;
+    line-height: 38px;
+    background: #eee;
+    border-bottom: 1px solid #aaa;
+    border-top: 1px solid #fafafa;
+    border-left: 1px solid #fff
+}
+
+.content-title1 li {
+    display: inline;
+    padding: 0 3px;
+}
+
+.form-group {
+    height: 25px;
+}
+
+.content-text {
+    margin: 15px 0 0 15px;
+    width: 96%;
+}
+
+table {
+    table-layout: fixed;
+}
+
+table td {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+table th {
+    text-align: center;
+}

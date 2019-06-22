@@ -1,0 +1,45 @@
+.content-text {
+    margin: 20px;
+    width: 96%;
+}
+
+table thead {
+    background-color: #e2e2e2;
+}
+
+table tbody tr:nth-child(odd) {
+    background: #fff;
+}
+
+table tbody tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.book_search {
+    height: 120px;
+    border: 1px solid #bbbbbb;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.book_search h5 {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+    background: rgb(226, 226, 226);
+    border-bottom: 1px solid #bbbbbb;
+}
+
+.book_search form {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.book_search label {
+    margin: 0 20px;
+}
+
+.books_show {
+    border-radius: 5px;
+    overflow: hidden;
+}

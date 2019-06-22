@@ -1,0 +1,28 @@
+.search {
+    height: auto;
+    border: 1px solid #bbbbbb;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.search h5 {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+    background: rgb(226, 226, 226);
+    border-bottom: 1px solid #bbbbbb;
+}
+
+.search form {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.search label {
+    margin: 0 20px;
+}
+
+.show {
+    border-radius: 5px;
+    overflow: hidden;
+}

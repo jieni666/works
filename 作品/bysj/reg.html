@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>博览图书馆用户注册</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<style>
+  body {
+    background-image: url("./img/login_bgx.gif");
+  }
+
+  .form-group {
+    height: 30px;
+  }
+
+  .all {
+    margin: 10% auto;
+    width: 65%;
+    height: 420px;
+    min-width: 890px;
+    box-shadow: 0 0 10px rgba(94, 94, 94, .5);
+    background-color: #f9f9f9;
+  }
+
+  .left {
+    width: 40%;
+    height: 360px;
+    border-right: 1px #a3a5af solid;
+    float: left;
+    margin: 4% 0 0 3%;
+  }
+
+  .right {
+    width: 40%;
+    height: 380px;
+    margin-left: 48%;
+    margin-top: 30px;
+    padding: 3% 0 0 1%;
+  }
+
+  .sex {
+    margin: 0px 15px;
+    line-height: 34px;
+  }
+
+  .sub {
+    margin-top: 35px;
+  }
+
+  .re_login {
+    line-height: 34px;
+  }
+
+  .checkAccount {
+    color: red;
+  }
+</style>
+
+<body>
+  <div class="all">
+    <div class="left">
+      <img src="./img/lo.png" style="padding: 15% 0 0 17%">
+      <h1 class="text-center">博 览 图 书 馆</h1>
+    </div>
+    <div class="right">
+      <form class="form-horizontal">
+        <div class=" form-group">
+          <label for="account" class="col-sm-3 control-label">账&emsp;&emsp;号:</label>
+          <div class="col-sm-9">
+            <input type="text" id="account" class="form-control" placeholder="学号/职工号">
+          </div>
+          <span class="col-sm-offset-3 col-sm-10 checkAccount"></span>
+        </div>
+        <div class=" form-group">
+          <label for="username" class="col-sm-3 control-label">姓&emsp;&emsp;名:</label>
+          <div class="col-sm-9">
+            <input type="text" id="username" class="form-control" placeholder="真实姓名">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password" class="col-sm-3 control-label">密&emsp;&emsp;码:</label>
+          <div class=" col-sm-9">
+            <input type="password" class="form-control" id="password" placeholder="密码" value="">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="r_password" class="col-sm-3 control-label">确认密码:</label>
+          <div class=" col-sm-9">
+            <input type="password" class="form-control" id="r_password" placeholder="再一次输入密码" value="">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label">性&emsp;&emsp;别:</label>
+          <div class="col-sm-9">
+            <div class="sex">
+              <input type="radio" name="sex" value="男" checked> &emsp;男 &emsp;
+              <input type="radio" name="sex" value="女">&emsp;女
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="tel" class="col-sm-3 control-label">联系电话:</label>
+          <div class="col-sm-9">
+            <input type="number" id="tel" class="form-control" placeholder="eg:13800000000">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="userType" class="col-sm-3 control-label">身份类别:</label>
+          <div class=" col-sm-9">
+            <select id="userType" class="form-control">
+                            <option value="2">学生</option>
+                            <option value="3">教师</option>
+                        </select>
+          </div>
+        </div>
+        <div class="form-group sub">
+          <span class="col-sm-6 re_login">已有账号？
+                        <a href="./login.html">点击登录</a>
+                    </span>
+          <input type="button" id="submit" class="btn btn-primary col-sm-offset-2 col-sm-4 fl" value="提交">
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="./script/jquery-3.2.1.min.js"></script>
+  <script src="./script/md5.js"></script>
+  <script src="./script/layui/layui.js"></script>
+
+  <script>
+    $(function() {
+      $('#account').on('blur', function() {
+        $.ajax({
+            url: './manage/check_user_exist.php',
+            type: 'post',
+            dataType: 'json',
+            data: {
+              account: $('#account').val().trim(),
+            }
+          })
+          .done(function(d) {
+            (d.flag) ? $('.checkAccount').html(d.errMsg): (d.error ? $('.checkAccount')
+              .html('') :
+              $('.checkAccount').html('此用户已被占用')
+            )
+          })
+      })
+
+      $('#submit').click(function() {
+        $.ajax({
+            url: './manage/reg.php',
+            type: 'post',
+            dataType: 'json',
+            data: {
+              account: $('#account').val().trim(),
+              username: $('#username').val().trim(),
+              password: hex_md5($('#password').val().trim()),
+              r_password: hex_md5($('#r_password').val().trim()),
+              sex: $(':radio[name="sex"]:checked').val(),
+              userType: $('#userType').val().trim(),
+              tel: $('#tel').val().trim()
+            },
+          })
+          .done(function(d) {
+            if (d.error) {
+                  layer.msg(d.errMsg, {
+                time: 2000
+              });
+            } else {
+                layui.use('layer', function(){
+                    var layer = layui.layer;
+                    layer.msg('登陆成功！', {
+                        icon: 1,
+                        time: 1000,
+                        offset: '30px'
+                    }, function() {
+                            location.href = 'login.html';
+                    });
+                });
+            }
+
+
+              // layui.use('layer', function(){
+              //     var layer = layui.layer;
+              //     layer.msg('注册成功！', {
+              //         icon: 1,
+              //         time: 1000,
+              //         offset: '30px'
+              //
+              //     });
+              // });
+
+
+
+
+              // layui.layer( '注册成功！', {
+              //     icon: 1,
+              //     time: 1000,
+              //     offset: '30px'
+              // }, function() {
+              //     location.href = 'login.html';
+              // });
+
+
+
+
+          })
+          .fail(function(jqXHR, textStatus, errorThrown) {
+            console.log('error');
+          })
+          .always(function() {
+            console.log('complete');
+          });
+      })
+
+    })
+  </script>
+</body>
+
+</html>

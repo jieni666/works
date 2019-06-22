@@ -1,0 +1,379 @@
+array(5) {
+[
+  6
+]=>
+array(30) {
+[
+  "catid"
+]=>
+string(1) "6"
+[
+  "siteid"
+]=>
+string(1) "1"
+[
+  "type"
+]=>
+string(1) "0"
+[
+  "modelid"
+]=>
+string(1) "1"
+[
+  "parentid"
+]=>
+string(1) "0"
+[
+  "arrparentid"
+]=>
+string(1) "0"
+[
+  "child"
+]=>
+string(1) "0"
+[
+  "arrchildid"
+]=>
+string(1) "6"
+[
+  "catname"
+]=>
+string(12) "官网首页"
+[
+  "style"
+]=>
+string(0) ""
+[
+  "image"
+]=>
+string(0) ""
+[
+  "description"
+]=>
+string(0) ""
+[
+  "parentdir"
+]=>
+string(0) ""
+[
+  "catdir"
+]=>
+string(5) "index"
+[
+  "url"
+]=>
+string(67) "http://www.zhouyong.com/index.php?m=content&c=index&a=lists&catid=6"
+[
+  "items"
+]=>
+string(1) "4"
+[
+  "hits"
+]=>
+string(1) "0"
+[
+  "setting"
+]=>
+string(354) "{"workflowid":"","ishtml":"0","content_ishtml":"0","create_to_html_root":"0","template_list":"rj","category_template":"category","list_template":"list","show_template":"show","meta_title":"","meta_keywords":"","meta_description":"","presentpoint":"1","defaultchargepoint":"0","paytype":"0","repeatchargedays":"1","category_ruleid":"6","show_ruleid":"16"}"
+[
+  "listorder"
+]=>
+string(1) "1"
+[
+  "ismenu"
+]=>
+string(1) "1"
+[
+  "sethtml"
+]=>
+string(1) "0"
+[
+  "letter"
+]=>
+string(14) "guanwangshouye"
+[
+  "usable_type"
+]=>
+string(0) ""
+[
+  "create_to_html_root"
+]=>
+string(1) "0"
+[
+  "ishtml"
+]=>
+string(1) "0"
+[
+  "content_ishtml"
+]=>
+string(1) "0"
+[
+  "category_ruleid"
+]=>
+string(1) "6"
+[
+  "show_ruleid"
+]=>
+string(2) "16"
+[
+  "workflowid"
+]=>
+string(0) ""
+[
+  "isdomain"
+]=>
+string(1) "0"
+}
+[7]=>
+array(30) {
+["catid"]=>
+string(1) "7"
+["siteid"]=>
+string(1) "1"
+["type"]=>
+string(1) "0"
+["modelid"]=>
+string(1) "2"
+["parentid"]=>
+string(1) "0"
+["arrparentid"]=>
+string(1) "0"
+["child"]=>
+string(1) "1"
+["arrchildid"]=>
+string(16) "7,11,12,13,14,15"
+["catname"]=>
+string(12) "学院概况"
+["style"]=>
+string(0) ""
+["image"]=>
+string(0) ""
+["description"]=>
+string(0) ""
+["parentdir"]=>
+string(0) ""
+["catdir"]=>
+string(8) "gaikuang"
+["url"]=>
+string(67) "http://www.zhouyong.com/index.php?m=content&c=index&a=lists&catid=7"
+["items"]=>
+string(1) "1"
+["hits"]=>
+string(1) "0"
+["setting"]=>
+string(381) "{"workflowid":"","ishtml":"0","content_ishtml":"0","create_to_html_root":"0","template_list":"rj","category_template":"category_download","list_template":"list_download","show_template":"show_download","meta_title":"","meta_keywords":"","meta_description":"","presentpoint":"1","defaultchargepoint":"0","paytype":"0","repeatchargedays":"1","category_ruleid":"6","show_ruleid":"16"}"
+["listorder"]=>
+string(1) "2"
+["ismenu"]=>
+string(1) "1"
+["sethtml"]=>
+string(1) "0"
+["letter"]=>
+string(15) "xueyuangaikuang"
+["usable_type"]=>
+string(0) ""
+["create_to_html_root"]=>
+string(1) "0"
+["ishtml"]=>
+string(1) "0"
+["content_ishtml"]=>
+string(1) "0"
+["category_ruleid"]=>
+string(1) "6"
+["show_ruleid"]=>
+string(2) "16"
+["workflowid"]=>
+string(0) ""
+["isdomain"]=>
+string(1) "0"
+}
+[8]=>
+array(30) {
+["catid"]=>
+string(1) "8"
+["siteid"]=>
+string(1) "1"
+["type"]=>
+string(1) "0"
+["modelid"]=>
+string(1) "3"
+["parentid"]=>
+string(1) "0"
+["arrparentid"]=>
+string(1) "0"
+["child"]=>
+string(1) "0"
+["arrchildid"]=>
+string(1) "8"
+["catname"]=>
+string(12) "教学科研"
+["style"]=>
+string(0) ""
+["image"]=>
+string(0) ""
+["description"]=>
+string(0) ""
+["parentdir"]=>
+string(0) ""
+["catdir"]=>
+string(7) "jiaoxue"
+["url"]=>
+string(67) "http://www.zhouyong.com/index.php?m=content&c=index&a=lists&catid=8"
+["items"]=>
+string(1) "2"
+["hits"]=>
+string(1) "0"
+["setting"]=>
+string(378) "{"workflowid":"","ishtml":"0","content_ishtml":"0","create_to_html_root":"0","template_list":"rj","category_template":"category_picture","list_template":"list_picture","show_template":"show_picture","meta_title":"","meta_keywords":"","meta_description":"","presentpoint":"1","defaultchargepoint":"0","paytype":"0","repeatchargedays":"1","category_ruleid":"6","show_ruleid":"16"}"
+["listorder"]=>
+string(1) "3"
+["ismenu"]=>
+string(1) "1"
+["sethtml"]=>
+string(1) "0"
+["letter"]=>
+string(12) "jiaoxuekeyan"
+["usable_type"]=>
+string(0) ""
+["create_to_html_root"]=>
+string(1) "0"
+["ishtml"]=>
+string(1) "0"
+["content_ishtml"]=>
+string(1) "0"
+["category_ruleid"]=>
+string(1) "6"
+["show_ruleid"]=>
+string(2) "16"
+["workflowid"]=>
+string(0) ""
+["isdomain"]=>
+string(1) "0"
+}
+[9]=>
+array(30) {
+["catid"]=>
+string(1) "9"
+["siteid"]=>
+string(1) "1"
+["type"]=>
+string(1) "0"
+["modelid"]=>
+string(1) "1"
+["parentid"]=>
+string(1) "0"
+["arrparentid"]=>
+string(1) "0"
+["child"]=>
+string(1) "0"
+["arrchildid"]=>
+string(1) "9"
+["catname"]=>
+string(12) "特色创新"
+["style"]=>
+string(0) ""
+["image"]=>
+string(0) ""
+["description"]=>
+string(0) ""
+["parentdir"]=>
+string(0) ""
+["catdir"]=>
+string(4) "tese"
+["url"]=>
+string(67) "http://www.zhouyong.com/index.php?m=content&c=index&a=lists&catid=9"
+["items"]=>
+string(1) "0"
+["hits"]=>
+string(1) "0"
+["setting"]=>
+string(354) "{"workflowid":"","ishtml":"0","content_ishtml":"0","create_to_html_root":"0","template_list":"rj","category_template":"category","list_template":"list","show_template":"show","meta_title":"","meta_keywords":"","meta_description":"","presentpoint":"1","defaultchargepoint":"0","paytype":"0","repeatchargedays":"1","category_ruleid":"6","show_ruleid":"16"}"
+["listorder"]=>
+string(1) "9"
+["ismenu"]=>
+string(1) "1"
+["sethtml"]=>
+string(1) "0"
+["letter"]=>
+string(13) "tesechuangxin"
+["usable_type"]=>
+string(0) ""
+["create_to_html_root"]=>
+string(1) "0"
+["ishtml"]=>
+string(1) "0"
+["content_ishtml"]=>
+string(1) "0"
+["category_ruleid"]=>
+string(1) "6"
+["show_ruleid"]=>
+string(2) "16"
+["workflowid"]=>
+string(0) ""
+["isdomain"]=>
+string(1) "0"
+}
+[10]=>
+array(30) {
+["catid"]=>
+string(2) "10"
+["siteid"]=>
+string(1) "1"
+["type"]=>
+string(1) "0"
+["modelid"]=>
+string(1) "1"
+["parentid"]=>
+string(1) "0"
+["arrparentid"]=>
+string(1) "0"
+["child"]=>
+string(1) "0"
+["arrchildid"]=>
+string(2) "10"
+["catname"]=>
+string(12) "公共服务"
+["style"]=>
+string(0) ""
+["image"]=>
+string(0) ""
+["description"]=>
+string(0) ""
+["parentdir"]=>
+string(0) ""
+["catdir"]=>
+string(8) "gonggong"
+["url"]=>
+string(68) "http://www.zhouyong.com/index.php?m=content&c=index&a=lists&catid=10"
+["items"]=>
+string(1) "0"
+["hits"]=>
+string(1) "0"
+["setting"]=>
+string(354) "{"workflowid":"","ishtml":"0","content_ishtml":"0","create_to_html_root":"0","template_list":"rj","category_template":"category","list_template":"list","show_template":"show","meta_title":"","meta_keywords":"","meta_description":"","presentpoint":"1","defaultchargepoint":"0","paytype":"0","repeatchargedays":"1","category_ruleid":"6","show_ruleid":"16"}"
+["listorder"]=>
+string(2) "10"
+["ismenu"]=>
+string(1) "1"
+["sethtml"]=>
+string(1) "0"
+["letter"]=>
+string(12) "gonggongfuwu"
+["usable_type"]=>
+string(0) ""
+["create_to_html_root"]=>
+string(1) "0"
+["ishtml"]=>
+string(1) "0"
+["content_ishtml"]=>
+string(1) "0"
+["category_ruleid"]=>
+string(1) "6"
+["show_ruleid"]=>
+string(2) "16"
+["workflowid"]=>
+string(0) ""
+["isdomain"]=>
+string(1) "0"
+}
+}

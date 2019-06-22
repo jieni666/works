@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="./css/reset.css">
+</head>
+<style>
+body {
+    background-image: url("./img/login_bgx.gif");
+}
+
+.wrap {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    padding: 20px 0;
+    width: 680px;
+    height: 320px;
+    margin: 13% auto;
+    box-shadow: 0 0 10px rgba(94, 94, 94, .5);
+    background-color: #f9f9f9;
+}
+
+.g-left {
+    padding: 30px;
+}
+
+.g-left img {
+    padding-left: 15px;
+}
+
+.g-left h1 {
+    margin-top: 20px
+}
+
+.g-right {
+    padding: 45px 10px;
+    border-left: 1px solid rgb(197, 194, 194);
+}
+
+.col-sm-2 {
+    padding-right: 0px;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.re-pw {
+    margin-left: 35px;
+}
+
+.sub {
+    margin: 0 38px 0 15px;
+}
+
+.checkName {
+    color: red;
+}
+</style>
+
+<body>
+    <div class="wrap">
+        <div class="g-left">
+            <img src="./img/lo.png" alt="博览图书馆管理系统logo">
+            <h1 class="text-center">博 览 图 书 馆</h1>
+        </div>
+        <div class="g-right">
+            <form class="form-horizontal" onsubmit="return false">
+                <div class="form-group clearfix">
+                    <label for="userName" class="col-sm-2 control-label">账&emsp;号</label>
+                    <div class=" col-sm-9">
+                        <input type="text" class="form-control" id="userName" placeholder="eg:163020010239" value="">
+                    </div>
+                    <span class="col-sm-offset-2 col-sm-10 checkName"></span>
+                </div>
+                <div class="form-group clearfix">
+                    <label for="password" class="col-sm-2 control-label">密&emsp;码</label>
+                    <div class=" col-sm-9">
+                        <input type="password" class="form-control" id="password" placeholder="******" value="">
+                    </div>
+                </div>
+                <div class="form-group clearfix re-pw">
+                    <a href="#" class="col-sm-offset-8">忘记密码？</a>
+                </div>
+                <div class="clearfix sub">
+                    <a href="reg.html" class="fl">还未注册？</a>
+                    <div class=" col-sm-5 fr">
+                        <input type="submit" id="submit"  class="btn btn-info btn-block" value="登陆">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./script/jquery-3.2.1.min.js"></script>
+    <script src="./script/md5.js"></script>
+    <script src="./script/layui/layui.js"></script>
+    <script>
+    $(function() {
+        $('#userName').on('blur', function() {
+            $.ajax({
+                    url: './manage/check_user_exist.php',
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        account: $('#userName').val().trim(),
+                    }
+                })
+                .done(function(d) {
+                    if (d.error) {
+                        $('.checkName').html(d.errMsg);
+                    } else {
+                        $('.checkName').html('');
+                    }
+                })
+        })
+        $('#submit').on('click', function() {
+            let account = $('#userName').val().trim();
+            let password = hex_md5($('#password').val().trim());
+            if (account == '' || password == '') {
+                layer.msg('密码/用户名必须填写!');
+                return false;
+            }
+            $.ajax({
+                    url: './manage/login.php',
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        account: account,
+                        password: password
+                    },
+                })
+                .done(function(d) {
+                    if (d.error) {
+                        layer.msg(d.errMsg, {
+                            time: 2000
+                        });
+                    } else {
+                        layui.use('layer', function(){
+                            var layer = layui.layer;
+                            layer.msg('登陆成功！', {
+                                icon: 1,
+                                time: 1000,
+                                offset: '30px'
+                            }, function() {
+                                if (d.type == 1) {
+                                    location.href = 'admin.php';
+                                } else {
+                                    location.href = 'index.php';
+                                }
+
+                            });
+                        });
+                    }
+                })
+                .fail(function() {
+                    console.log('error');
+                })
+                .always(function() {
+                    console.log('complete');
+                });
+        });
+    });
+    </script>
+</body>
+
+</html>
